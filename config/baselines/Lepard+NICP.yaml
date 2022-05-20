@@ -1,0 +1,59 @@
+gpu_mode: True
+deformation_model: ED
+
+use_ldmk: True
+ldmk_config: "./correspondence/configs/correspondence.yaml"
+
+use_depth: True
+
+
+num_workers: 6
+batch_size: 1
+augment_noise: False
+
+
+#optimization
+iters: &iters 600
+lr: 0.02
+momentum: 0.9
+weight_decay: 0.0001
+max_break_count: 70
+break_threshold_ratio: 0.001
+
+w_ldmk: 1
+w_cd: 0.1
+w_arap: 0.5
+
+reject_outliers: &reject_outliers True
+
+samples: 2000
+
+inlier_thr : &inlier_thr 0.5
+
+#dataset
+data_root : "data/split/"
+split: { 'test': "4DMatch-F" }
+
+
+
+
+#########################################################################
+# deformation graph configeration
+#########################################################################
+# Depth-to-mesh conversion
+max_triangle_distance : 0.04
+# Node sampling and edges computation
+node_coverage: &node_coverage 0.09  # in meters
+USE_ONLY_VALID_VERTICES: True
+num_neighbors: 8
+ENFORCE_TOTAL_NUM_NEIGHBORS: False
+SAMPLE_RANDOM_SHUFFLE:  False
+# Pixel anchors
+NEIGHBORHOOD_DEPTH: 2
+REMOVE_NODES_WITH_NOT_ENOUGH_NEIGHBORS: True
+#########################################################################
+
+
+#experiment
+exp_dir :  eval
+folder: L+NICP

@@ -1,0 +1,13 @@
+model:
+  in_dim: 6
+  num_layers: &num_layers 9
+  feature_dim: 144
+  n_head: &n_head 8
+  pe_type: &pe_type "rotary" # options: [ 'rotary', 'sinusoidal', 'none']
+  voxel_size: &voxel_size 0.08 #default 0.04
+  sigma_spat: &sigma_spat 0.1
+  spatial_consistency_check: True
+
+
+
+

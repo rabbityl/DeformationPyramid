@@ -1,0 +1,50 @@
+gpu_mode: True
+deformation_model: ED
+
+use_ldmk: False
+
+use_depth: True
+
+
+#optimization
+iters: &iters 600
+lr: 0.02
+momentum: 0.9
+weight_decay: 0.0001
+max_break_count: 30
+break_threshold_ratio: 0.01
+
+w_ldmk: 1
+w_cd: 1
+w_arap: 0.5
+
+
+samples: 2000
+
+
+#dataset
+data_root : "data/split/"
+split: { 'test': "4DMatch-F" }
+
+
+
+#########################################################################
+# deformation graph configeration
+#########################################################################
+# Depth-to-mesh conversion
+max_triangle_distance : 0.06
+# Node sampling and edges computation
+node_coverage: &node_coverage 0.09  # in meters
+USE_ONLY_VALID_VERTICES: True
+num_neighbors: 8
+ENFORCE_TOTAL_NUM_NEIGHBORS: False
+SAMPLE_RANDOM_SHUFFLE:  False
+# Pixel anchors
+NEIGHBORHOOD_DEPTH: 2
+REMOVE_NODES_WITH_NOT_ENOUGH_NEIGHBORS: False
+#########################################################################
+
+
+#experiment
+exp_dir :  !join [ node_coverage, *node_coverage]
+folder: NICP-sample

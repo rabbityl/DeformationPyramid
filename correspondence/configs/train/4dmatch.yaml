@@ -1,0 +1,77 @@
+matcher_config: './configs/lepard.yaml'
+matcher_weights: './pretrained/lepard_weights.pth'
+
+
+model:
+  in_dim: 6
+  num_layers: &num_layers 9
+  feature_dim: 144
+  n_head: &n_head 8
+  pe_type: &pe_type "rotary" # options: [ 'rotary', 'sinusoidal', 'none']
+  voxel_size: &voxel_size 0.08 #default 0.04
+  sigma_spat: &sigma_spat 0.1
+  spatial_consistency_check: True
+
+
+train_loss:
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  pos_weight: 1.0
+  neg_weight: 1.0
+  motion_loss_type: L1
+  motion_weight: &motion_weight 0.1
+  match_weight: 1
+  match_type: 'dual_softmax'
+  positioning_type: 'procrustes'
+#  confidence_threshold : 0.2
+  confidence_threshold_metric: 0.1  #confidence_threshold for evaluation
+  inlier_thr: 0.04 # 4 cm
+  fmr_thr: 0.5
+  registration_threshold: 0.2 # [3DMatch: 0.2m]
+  dataset: 4dmatch
+  mutual_nearest: True
+  balanced_bce : True
+
+
+# misc
+exp_dir:    !join  [ num_layers, *num_layers ]
+mode: train
+gpu_mode:  True
+verbose: True
+verbose_freq: 1000
+do_valid: True
+do_test: True
+pretrain: ''
+
+
+# optimiser:
+optimizer: SGD
+max_epoch: 1500
+lr: 0.001
+weight_decay: 0.000001
+momentum: 0.93
+scheduler: ExpLR
+scheduler_gamma: 0.95
+scheduler_freq: 1
+iter_size: 1
+
+
+
+#dataset:
+dataset: 4dmatch
+folder: deploy
+batch_size: 8
+num_workers: 16
+augment_noise: 0.002
+data_root: /path/to/4DMatch
+split: {
+  "train": split/train,
+  "val": split/4DLoMatch,
+  "test": split/4DMatch
+}
+
+# change params for test
+# batch_size
+# pretrain
+# split
+# mode

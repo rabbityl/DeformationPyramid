@@ -1,0 +1,30 @@
+
+gpu_mode: True
+deformation_model: Nerfies
+
+
+band_width : 4
+
+iters: &iters 5000
+lr: 0.01
+momentum: 0.9
+weight_decay: 0.0001
+max_break_count: 70
+break_threshold_ratio: 0.001
+
+#MLP config
+depth: 7
+width: 128
+act_fn : relu
+
+samples : 2000
+
+
+#dataset
+data_root : "data/split/"
+split: { 'test': "4DMatch-F" }
+
+
+#experiment
+exp_dir :  earlystop
+folder: Nerfies

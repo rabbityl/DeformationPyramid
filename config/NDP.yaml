@@ -1,0 +1,42 @@
+gpu_mode: True
+deformation_model: NDP
+
+use_ldmk: False
+use_depth: False
+
+#optimization
+iters: &iters 500
+lr: 0.01
+max_break_count: 15
+break_threshold_ratio: 0.001
+
+
+#cost function
+w_reg: &w_reg 0.0
+
+
+#sample cnt for chamfer distance
+samples: &samples 2000
+
+
+# deformation pyramid configuration
+m : &m 9
+k0 : &k0 -8
+depth: &depth 3
+width: &width 128
+act_fn: relu
+
+
+# motion representation
+motion_type : &motion_type  "SE3"    # option  [ "Sim3", "SE3", "sflow"]
+rotation_format : &rotation_format  "axis_angle"     # options [ "6D", "quaternion", "axis_angle", "euler"]
+
+
+#dataset
+data_root : "data/split/"
+split: { 'test': "4DMatch-F" }
+augment_noise: False
+
+#experiment
+exp_dir :  vis
+folder: pyramid_level

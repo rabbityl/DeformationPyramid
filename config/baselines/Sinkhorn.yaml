@@ -1,0 +1,19 @@
+gpu_mode: False
+deformation_model: Sinkhorn
+
+#dataset
+data_root : "data/split/"
+split: { 'test': "4DMatch-F" }
+
+samples : 2000
+
+
+blur: &blur 0.1
+reach: &reach 1
+Nsteps : 11
+lr: 1
+
+
+#experiment
+exp_dir : !join [ blur, *blur, reach,*reach]
+folder: Sinkhron

@@ -1,0 +1,57 @@
+#configuration for lepard, the raw match generator
+entangled: &entangled False
+
+# kpfcn backbone
+kpfcn_config:
+  num_layers: 4
+  in_points_dim: 3
+  first_feats_dim: 256
+  final_feats_dim: 32
+  first_subsampling_dl: 0.01
+  in_feats_dim: 1
+  conv_radius: 2.5
+  deform_radius: 5.0
+  num_kernel_points: 15
+  KP_extent: 2.0
+  KP_influence: linear
+  aggregation_mode: sum
+  fixed_kernel_points: center
+  use_batch_norm: True
+  batch_norm_momentum: 0.02
+  deformable: False
+  modulated: False
+  add_cross_score: True
+  condition_feature: True
+  coarse_feature_dim: &coarse_feature_dim 528 #[default 528, 1056]
+  fine_feature_dim:  264
+  coarse_match_radius: 0.024 # 0.05 for L: -3, 0.06 for L: -2, 0.1 for L: -1
+  coarse_level: -2
+#  fine_match_radius: 0.0375
+
+
+coarse_matching: &coarse_matching
+  feature_dim: *coarse_feature_dim
+  confidence_threshold: 0.1
+  dsmax_temperature: 0.1
+  match_type: &match_type 'dual_softmax' #sinkhorn, dual_softmax
+  entangled: *entangled
+  skh_init_bin_score: 1.0
+  skh_iters: 3
+  skh_prefilter: False
+
+
+coarse_transformer:
+  feature_dim: *coarse_feature_dim
+  n_head: 4
+  layer_types: ['self', 'cross', 'positioning', 'self', 'cross']
+  positioning_type: &positioning_type 'procrustes' # options: [ 'randSO3' , 'procrustes', 'oracle']
+  pe_type: &pe_type "rotary" # options: [ 'rotary', 'sinusoidal']
+  entangled: *entangled
+  vol_bnds: [ [ -3.6, -2.4,  1.14], [ 1.093, 0.78, 2.92 ]]
+  voxel_size: &voxel_size 0.04 #default 0.04
+  feature_matching : *coarse_matching
+  procrustes:
+    max_condition_num: 40
+    sample_rate: 1.0
+
+
