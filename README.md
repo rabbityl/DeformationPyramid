@@ -13,7 +13,7 @@ The code tested on python=3.8.10, pytorch=1.9.0 with the following packages:
  
 
 ### Obtain the 4DMatch benchmark
-- Download the train/val/4DMatch-F/4DLoMatch-F split, [(Google drive 14G)]((https://drive.google.com/file/d/1ySykuxxRyE-OvFY8gDgE_SoacKbexMDz/view?usp=sharing)). We filter point cloud pairs with near-rigid motions from the original 4DMatch benchmark.  4DMatch-F & 4DLoMatch-F denote the filtered benchmark. License follows the original 4DMatch.
+- Download the train/val/4DMatch-F/4DLoMatch-F split, [(Google drive 14G)](https://drive.google.com/file/d/1ySykuxxRyE-OvFY8gDgE_SoacKbexMDz/view?usp=sharing). We filter point cloud pairs with near-rigid motions from the original 4DMatch benchmark.  4DMatch-F & 4DLoMatch-F denote the filtered benchmark.
 - Extract it and create a soft link under this repository.
 ```shell
 ln -s /path/to/4Dmatch  ./data
