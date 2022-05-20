@@ -28,7 +28,7 @@ To visualize the registration result, add ```--visualize```.
 - First download pre-trained point cloud matching and outlier rejection models [(google drive, 271M)](https://drive.google.com/file/d/1T8z71iv3dvyAQhZUgct0w5yDtfRFwui9/view?usp=sharing). Move the models to ``correspondence/pretrained``
 - Install KPConv
 ```shell
-cd correspondence/cpp_wrappers; sh compile_wrappers.sh; cd ..
+cd correspondence/cpp_wrappers; sh compile_wrappers.sh; cd ../..
 ```
 - Finally run
 ```
