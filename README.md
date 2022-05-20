@@ -45,7 +45,7 @@ python shape_transfer.py -s sim3_demo/AlienSoldier.ply -t sim3_demo/Ortiz.ply
 ## Related projects
 
 ### Dataset
-The datasets are obtained by agreeing to be bound by their terms and conditions.
+The datasets are obtained by agreeing to be bound by their terms and conditions.  
 Original 4DMatch: [rabbityl/lepard](https://github.com/rabbityl/lepard) [[License](https://docs.google.com/forms/d/e/1FAIpQLSeQ1hkCmmTiib-oQM9s21y3Tz9ojiI2zB8vZSqTZjT2DiRZ0g/viewform)]  
 DeformingThings4D: [rabbityl/DeformingThings4D](https://github.com/rabbityl/DeformingThings4D) [[License](https://docs.google.com/forms/d/e/1FAIpQLSckMLPBO8HB8gJsIXFQHtYVQaTPTdd-rZQzyr9LIIkHA515Sg/viewform)]  
 Mixamo: [http://mixamo.com/](http://mixamo.com/) [[License](https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html)]
