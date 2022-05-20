@@ -24,7 +24,7 @@ To visualize the registration result, add ```--visualize```.
 
 
 ### Reproduce the result of LNDP (supervised)
-First download pre-trained point cloud matching and outlier rejection models [(google drive, 271M)](https://drive.google.com/file/d/1T8z71iv3dvyAQhZUgct0w5yDtfRFwui9/view?usp=sharing). Extract the model s.t. they are under ``correspondence/pretrained``
+First download pre-trained point cloud matching and outlier rejection models [(google drive, 271M)](https://drive.google.com/file/d/1T8z71iv3dvyAQhZUgct0w5yDtfRFwui9/view?usp=sharing). Move the models to ``correspondence/pretrained``
 ```
 python eval_supervised.py --config config/LNDP.yaml  
 ```
