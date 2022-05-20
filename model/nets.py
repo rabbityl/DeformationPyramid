@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from .rigid_body import _6d_to_SO3, euler_to_SO3, quaternion_to_SO3, exp_se3, exp_so3, _copysign
-from .position_encoding import *
+# from .position_encoding import *
 import torch.nn.functional as F
 from torch.autograd.functional import jacobian
 

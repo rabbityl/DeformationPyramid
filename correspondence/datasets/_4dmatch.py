@@ -55,7 +55,7 @@ class _4DMatch(Dataset):
 
     def __getitem__(self, index, debug=False):
 
-        print(self.entries[index])
+
 
         with np.load(self.entries[index]) as entry :
 

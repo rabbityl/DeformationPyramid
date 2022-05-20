@@ -5,7 +5,7 @@ deformation_model: NDP
 use_ldmk: True
 ldmk_config: "./correspondence/configs/correspondence.yaml"
 
-num_workers: 0
+num_workers: 4
 batch_size: 1
 augment_noise: False
 

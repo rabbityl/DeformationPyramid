@@ -17,6 +17,7 @@ ln -s /path/to/4Dmatch  ./data
 
 
 ### Reproduce the result of NDP (no-learned)
+- Run
 ```eval
 python eval_nolearned.py --config config/NDP.yaml  
 ```
@@ -24,7 +25,12 @@ To visualize the registration result, add ```--visualize```.
 
 
 ### Reproduce the result of LNDP (supervised)
-First download pre-trained point cloud matching and outlier rejection models [(google drive, 271M)](https://drive.google.com/file/d/1T8z71iv3dvyAQhZUgct0w5yDtfRFwui9/view?usp=sharing). Move the models to ``correspondence/pretrained``
+- First download pre-trained point cloud matching and outlier rejection models [(google drive, 271M)](https://drive.google.com/file/d/1T8z71iv3dvyAQhZUgct0w5yDtfRFwui9/view?usp=sharing). Move the models to ``correspondence/pretrained``
+- Install KPConv
+```shell
+cd correspondence/cpp_wrappers; sh compile_wrappers.sh; cd ..
+```
+- Finally run
 ```
 python eval_supervised.py --config config/LNDP.yaml  
 ```
