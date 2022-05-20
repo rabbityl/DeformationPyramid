@@ -3,12 +3,7 @@
 ### Requirements
 
 The code tested on python=3.8.10, pytorch=1.9.0 with the following packages:
-- pytorch3d
-- open3d
-- opencv-python
-- tqdm
-- mayavi
-- easydict
+- pytorch3d, open3d, opencv-python, tqdm, mayavi, easydict
 
  
 
