@@ -186,18 +186,20 @@ if __name__ == "__main__":
                 stats_meter[key].update(value)
 
 
-            break
+
 
         message = f'{c_iter}/{len(test_set)}: '
         for key, value in stats_meter.items():
             message += f'{key}: {value.avg:.3f}\t'
         logger.write(message + '\n')
 
+        print("score on ", split, '\n', message)
 
 
 
 
-
-
+    # note down average time cost
+    print('time cost average')
     for ele in timer.get_strings():
-        logger.write(ele)
+        logger.write(ele + '\n')
+        print(ele)

@@ -1,13 +1,13 @@
 import torch
 import  sys
+import numpy as np
 from skimage import io
-from .geometry import *
+# from .geometry import *
 import pytorch3d
 import torch.optim as optim
 
 from geomloss import SamplesLoss
 
-from .geometry import map_pixel_to_pcd,pc_2_uv
 from .loss import  arap_cost, landmark_cost, compute_truncated_chamfer_distance, nerfies_regularization
 from .nets import *
 
