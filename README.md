@@ -2,12 +2,12 @@
 
 #### Hierarchical non-rigid registration of multiple scans of a Dinosaur using LNDP
 
-<img src="img/dino.gif" alt="drawing" width="800"/>
+<img src="img/dino.gif" alt="drawing" width="650"/>
 
 
 #### Scale variant non-rigid registration with Sim(3) Field
 
-<img src="img/transfer.gif" alt="drawing" width="800"/>
+<img src="img/transfer.gif" alt="drawing" width="650"/>
 
 
 ### Requirements
