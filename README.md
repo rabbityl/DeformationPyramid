@@ -1,5 +1,11 @@
 ## Non-rigid Point Cloud Registration with Neural Deformation Pyramid 
 
+
+<img src="img/dino.gif" alt="drawing" width="500"/>
+
+<img src="img/transfer.gif" alt="drawing" width="500"/>
+
+
 ### Requirements
 
 The code tested on python=3.8.10, pytorch=1.9.0 with the following packages:
