@@ -6,7 +6,6 @@ cxx/*egg-info
 *.pth
 *.obj
 *.ply
-*.gif
 *.npz
 *.json
 *.xml
