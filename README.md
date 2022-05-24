@@ -1,6 +1,6 @@
 ## Non-rigid Point Cloud Registration with Neural Deformation Pyramid 
 
-Hierarchical non-rigid registration of multiple scans of a Dinosaur
+Hierarchical non-rigid registration of multiple scans
 
 <img src="img/dino.gif" alt="drawing" width="650"/>
 
