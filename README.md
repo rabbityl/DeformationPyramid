@@ -1,13 +1,13 @@
 ## Non-rigid Point Cloud Registration with Neural Deformation Pyramid 
 
-#### Hierarchical non-rigid registration of multiple scans of a Dinosaur using LNDP
+Hierarchical non-rigid registration of multiple scans of a Dinosaur using LNDP
 
 <img src="img/dino.gif" alt="drawing" width="650"/>
 
 
-#### Scale variant non-rigid registration with Sim(3) Field
+Scale variant non-rigid registration with Sim(3) warp field
 
-<img src="img/transfer.gif" alt="drawing" width="650"/>
+<img src="img/transfer.gif" alt="drawing" width="800"/>
 
 
 ### Requirements
