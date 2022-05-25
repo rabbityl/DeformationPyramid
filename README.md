@@ -53,25 +53,11 @@ To visualize the registration result, add ```--visualize```.
 python shape_transfer.py -s sim3_demo/AlienSoldier.ply -t sim3_demo/Ortiz.ply
 ```
 
-## Related projects
+## Related projects 
 
-### Dataset
-The datasets are obtained by agreeing to be bound by their terms and conditions.  
-Original 4DMatch: [rabbityl/lepard](https://github.com/rabbityl/lepard) [[License](https://docs.google.com/forms/d/e/1FAIpQLSeQ1hkCmmTiib-oQM9s21y3Tz9ojiI2zB8vZSqTZjT2DiRZ0g/viewform)]  
-DeformingThings4D: [rabbityl/DeformingThings4D](https://github.com/rabbityl/DeformingThings4D) [[License](https://docs.google.com/forms/d/e/1FAIpQLSckMLPBO8HB8gJsIXFQHtYVQaTPTdd-rZQzyr9LIIkHA515Sg/viewform)]  
-Mixamo: [http://mixamo.com/](http://mixamo.com/) [[License](https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html)]
+Lepard: [rabbityl/lepard](https://github.com/rabbityl/lepard)
+DeformingThings4D: [rabbityl/DeformingThings4D](https://github.com/rabbityl/DeformingThings4D) 
 
 
-### Baselines (a few are not official):  
-CPD (Myronenko et al., 2010): [siavashk/pycpd](https://github.com/siavashk/pycpd)  
-BCPD (Hirose et al., 2020): [ohirose/bcpd](https://github.com/ohirose/bcpd)  
-Sinkhorn (Feydy et al., 2019): [jeanfeydy/geomloss](https://github.com/jeanfeydy/geomloss)  
-ZoomOut (Melzi et al., 2019): [RobinMagnet/pyFM](https://github.com/RobinMagnet/pyFM)  
-NSFP (Li et al., 2021): [Lilac-Lee/Neural_Scene_Flow_Prior](https://github.com/Lilac-Lee/Neural_Scene_Flow_Prior)  
-Nerfies (Park et al., 2021): [google/nerfies](https://github.com/google/nerfies)  
-GeomFmaps (Donati et al., 2020): [LIX-shape-analysis/GeomFmaps](https://github.com/LIX-shape-analysis/GeomFmaps)  
-FLOT (Puy et al., 2020): [valeoai/FLOT](https://github.com/valeoai/FLOT)  
-PointPWC (Wu et al., 2020): [DylanWusee/PointPWC](https://github.com/DylanWusee/PointPWC)  
-Synorim (Huang et al., 2022): [huangjh-pub/synorim](https://github.com/huangjh-pub/synorim)  
-Lepard, (Li et al., 2022): [rabbityl/lepard](https://github.com/rabbityl/lepard)
+
 
