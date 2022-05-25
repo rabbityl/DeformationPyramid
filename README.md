@@ -58,6 +58,15 @@ python shape_transfer.py -s sim3_demo/AlienSoldier.ply -t sim3_demo/Ortiz.ply
 Lepard: [rabbityl/lepard](https://github.com/rabbityl/lepard)  
 DeformingThings4D: [rabbityl/DeformingThings4D](https://github.com/rabbityl/DeformingThings4D) 
 
-
+### Citation
+If you use our code please cite:
+```text
+@article{li2022DeformationPyramid, 
+    title={Non-rigid Point Cloud Registration with Neural Deformation Pyramid.}, 
+    author={Yang Li and Tatsuya Harada},
+    journal={arXiv preprint},
+    year={2022}
+}
+```
 
 
