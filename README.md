@@ -55,7 +55,7 @@ python shape_transfer.py -s sim3_demo/AlienSoldier.ply -t sim3_demo/Ortiz.ply
 
 ## Related projects 
 
-Lepard: [rabbityl/lepard](https://github.com/rabbityl/lepard)
+Lepard: [rabbityl/lepard](https://github.com/rabbityl/lepard)  
 DeformingThings4D: [rabbityl/DeformingThings4D](https://github.com/rabbityl/DeformingThings4D) 
 
 
