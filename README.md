@@ -1,4 +1,4 @@
-## Non-rigid Point Cloud Registration with Neural Deformation Pyramid 
+## Non-rigid Point Cloud Registration with Neural Deformation Pyramid [[Paper](http://arxiv.org/abs/2205.12796)]
 
 Hierarchical non-rigid registration of multiple scans
 
@@ -64,7 +64,7 @@ If you use our code please cite:
 @article{li2022DeformationPyramid, 
     title={Non-rigid Point Cloud Registration with Neural Deformation Pyramid.}, 
     author={Yang Li and Tatsuya Harada},
-    journal={arXiv preprint},
+    journal={arXiv preprint arXiv:2205.12796},
     year={2022}
 }
 ```
