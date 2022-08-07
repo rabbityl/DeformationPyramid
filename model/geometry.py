@@ -1,10 +1,10 @@
 import torch
 import numpy as np
-# import MVRegC
+# import MVRegC  #  uncommment this if you want to run the N-ICP baseline.
 import open3d as o3d
 
 
-
+ 
 def rigid_fit( X, Y, w, eps=0.0001):
     '''
     @param X: source frame [B, N,3]
