@@ -185,8 +185,14 @@ def compute_truncated_chamfer_distance(
             cham_norm_y *= weights.view(N, 1)
 
     # Apply point reduction
-    cham_x = cham_x.sum(1)  # (N,)
-    cham_y = cham_y.sum(1)  # (N,)
+      
+    #cham_x = cham_x.sum(1)  # (N,)
+    #cham_y = cham_y.sum(1)  # (N,)
+
+    # use l1 norm, more robust to partial case
+    cham_x = torch.sqrt(cham_x).sum(1)  # (N,)
+    cham_y = torch.sqrt(cham_y).sum(1)  # (N,)
+
     if return_normals:
         cham_norm_x = cham_norm_x.sum(1)  # (N,)
         cham_norm_y = cham_norm_y.sum(1)  # (N,)
