@@ -68,7 +68,7 @@ if __name__ == "__main__":
     model = Registration(config)
     timer = Timers()
 
-    stats_meter = None
+
 
 
     from correspondence.datasets._4dmatch import _4DMatch
@@ -82,7 +82,8 @@ if __name__ == "__main__":
 
         config.split['test'] = split
 
-
+        stats_meter = None
+        
         test_set = _4DMatch(config, 'test', data_augmentation=False)
         test_loader, _ = get_dataloader(test_set, config, shuffle=False)
 
