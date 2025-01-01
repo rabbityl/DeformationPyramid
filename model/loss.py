@@ -57,6 +57,40 @@ def _handle_pointcloud_input(
         )
     return X, lengths, normals
 
+
+def point_2_plane_distance(
+        x,
+        y,
+        x_lengths=None,
+        y_lengths=None,
+        x_normals=None,
+        y_normals=None
+
+):
+    '''
+    '''
+
+    x, x_lengths, x_normals = _handle_pointcloud_input(x, x_lengths, x_normals)
+    y, y_lengths, y_normals = _handle_pointcloud_input(y, y_lengths, y_normals)
+    N, P1, D = x.shape
+    assert N==1
+
+    x_nn = knn_points(x, y, lengths1=x_lengths, lengths2=y_lengths, K=1)
+    y_nn = knn_points(y, x, lengths1=y_lengths, lengths2=x_lengths, K=1)
+
+    x_ref_normal = y_normals[0][x_nn.idx[0,:, 0]]
+    x_ref_point = y[0][x_nn.idx[0,:, 0] ]
+
+    y_ref_normal = x_normals[0][y_nn.idx[0,:, 0]]
+    y_ref_point = x[0][y_nn.idx[0,:, 0] ]
+
+    x_2_plane = ( (x[0] - x_ref_point ) * x_ref_normal ).pow(2).sum(1).sqrt().mean()
+    y_2_plane = ( (y[0] - y_ref_point ) * y_ref_normal ).pow(2).sum(1).sqrt().mean()
+
+    p2plane = x_2_plane + y_2_plane
+
+    return p2plane, x_2_plane, y_2_plane, x_ref_normal
+
 def compute_truncated_chamfer_distance(
         x,
         y,
